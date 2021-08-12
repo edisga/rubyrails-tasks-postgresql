@@ -6,6 +6,8 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:Description) %>:</strong></dt>
   <dd><%= @task.Description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Done) %>:</strong></dt>
+  <dd><%= check_box "task", "Done", {:checked => @task.Done, :disabled => true}%></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
